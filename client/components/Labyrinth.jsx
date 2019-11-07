@@ -1,8 +1,13 @@
 import React from 'react'
+import Pixel from "./Pixel"
 
 class Labyrinth extends React.Component {
   render(){
-    return <h1>Hello Labyrinth </h1>
+    return(
+      <>
+      {Array.from({length: 9000}, (v,i) => <Pixel key={i}/>)}
+      </>
+    )
   }
 }
 
