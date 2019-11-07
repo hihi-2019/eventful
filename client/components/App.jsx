@@ -4,6 +4,7 @@ import Gravity from './Gravity'
 import Labyrinth from './Labyrinth'
 import Home from './Home'
 
+
 class App extends React.Component {
   render(){
     return(
