@@ -13,3 +13,25 @@ div {
   display: flex;
   flex-wrap: wrap;
 }
+
+.homelink {
+  position: absolute;
+  background-color: transparent;
+  font-size: 60px;
+}
+
+.cartridge {
+  margin-top: 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameboy {
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  width: 0.5rem;
+}
