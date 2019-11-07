@@ -40,6 +40,7 @@ class Home extends React.Component {
         {this.renderRedirect()}
         <h1 draggable onDrag={(event) => this.handleDrag(event, 'labyrinth')}>Labyrinth </h1>
         <h1 draggable onDrag={(event) => this.handleDrag(event, 'gravity')}>Gravity </h1>
+        <h1 draggable onDrag={(event) => this.handleDrag(event, 'pop')}>Pop </h1>
         <h1 onDragOver={(event => this.handleDragOver(event))} onDrop={event => this.handleDrop(event)}>Drop here</h1>
       </>
     )
