@@ -19,6 +19,7 @@ class Labyrinth extends React.Component {
   }
 
   render(){
+    document.documentElement.requestFullscreen()
     return(
       <>
       {Array.from({length: 2000},
