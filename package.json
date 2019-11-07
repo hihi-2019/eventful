@@ -32,6 +32,7 @@
     "express": "^4.16.4",
     "react-keyboard-event-handler": "^1.5.1",
     "react-router-dom": "^5.1.2",
+    "react-sound": "^1.2.0",
     "superagent": "^5.0.2"
   },
   "devDependencies": {

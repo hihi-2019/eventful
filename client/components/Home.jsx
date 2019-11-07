@@ -38,9 +38,14 @@ class Home extends React.Component {
     return (
       <>
         {this.renderRedirect()}
-        <h1 draggable onDrag={(event) => this.handleDrag(event, 'labyrinth')}>Labyrinth !!</h1>
-        <h1 draggable onDrag={(event) => this.handleDrag(event, 'gravity')}>Gravity </h1>
-        <h1 onDragOver={(event => this.handleDragOver(event))} onDrop={event => this.handleDrop(event)}>Drop here</h1>
+        <div className="cartridge">
+        <img height={90} width={90} src="/images/cartridge.png" draggable onDrag={(event) => this.handleDrag(event, 'labyrinth')}/>
+        <img height={90} width={90} src="/images/cartridge.png" draggable onDrag={(event) => this.handleDrag(event, 'gravity')}/>
+        <img height={90} width={90} src="/images/cartridge.png" draggable onDrag={(event) => this.handleDrag(event, 'pop')}/>
+        </div>
+        <div className="gameboy">
+        <img src="/images/gameboy.png" onDragOver={(event => this.handleDragOver(event))} onDrop={event => this.handleDrop(event)}/>
+        </div>
       </>
     )
   }

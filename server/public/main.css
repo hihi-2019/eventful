@@ -2,6 +2,7 @@ html, body, .viewport {
   width: 100%;
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 #app {
@@ -11,4 +12,26 @@ html, body, .viewport {
 div {
   display: flex;
   flex-wrap: wrap;
+}
+
+.homelink {
+  position: absolute;
+  background-color: transparent;
+  font-size: 60px;
+}
+
+.cartridge {
+  margin-top: 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameboy {
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  width: 0.5rem;
 }
