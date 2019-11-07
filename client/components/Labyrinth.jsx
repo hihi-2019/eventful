@@ -1,5 +1,7 @@
 import React from 'react'
 import Pixel from "./Pixel"
+import { Link } from 'react-router-dom'
+
 
 class Labyrinth extends React.Component {
   constructor(props){
@@ -22,6 +24,7 @@ class Labyrinth extends React.Component {
     document.documentElement.requestFullscreen()
     return(
       <>
+      <Link className="homelink" to='/'>Home</Link>
       {Array.from({length: 2000},
       (v,i) =>{ 
         let color
