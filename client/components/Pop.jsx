@@ -1,5 +1,6 @@
 import React from 'react'
 import Bubble from './Bubble'
+import { Link } from 'react-router-dom'
 
 class Pop extends React.Component {
   constructor(props){
@@ -23,14 +24,18 @@ class Pop extends React.Component {
   }
 
   render(){
+    document.documentElement.requestFullscreen()
     return(
-    <svg onClick={this.makeBubble} width={window.screen.width} height={window.screen.height}>
+      <>
+      <Link className="homelink" to='/'>Home</Link>
+      <svg onClick={this.makeBubble} width={window.screen.width} height={window.screen.height}>
       {this.state.currentCircles.map((circle, i) => {
         return(
         <Bubble key={i} cx={circle.cx} cy={circle.cy} r={circle.r}/>
         )
       })}
-  </svg>
+    </svg>
+    </>
     )       
   }
 }
