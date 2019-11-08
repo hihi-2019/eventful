@@ -7,6 +7,7 @@ class Home extends React.Component {
     this.state = {
       draggedTask: '',
       redirect: false,
+      fullscreen: false,
     }
   }
 
@@ -34,10 +35,17 @@ class Home extends React.Component {
     }
   }
 
+  toggleFullScreen = () => {
+    document.documentElement.requestFullscreen()
+    this.setState({
+      fullscreen: true
+    })
+  }
+
   render() {
     return (
       <>
-      <div className='homelink' onClick={()=> document.documentElement.requestFullscreen()}>full screen</div>
+      {!this.state.fullscreen && <div className='homelink' onClick={()=> this.toggleFullScreen()}>full screen</div>}
         {this.renderRedirect()}
         <div className="background"> </div>
         <div className="cartridge">
@@ -49,6 +57,9 @@ class Home extends React.Component {
         </div>
         <div className="img3">
         <img height={120} width={120} src="/images/cartridge.png" draggable onDrag={(event) => this.handleDrag(event, 'pop')}/>
+        </div>
+        <div className="img5">
+        <img height={120} width={120} src="/images/cartridge.png" draggable onDrag={(event) => this.handleDrag(event, 'spinner')}/>
         </div>
         </div>
         <div className="gameboy">
