@@ -37,6 +37,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
+      <div className='homelink' onClick={()=> document.documentElement.requestFullscreen()}>full screen</div>
         {this.renderRedirect()}
         <div className="background"> </div>
         <div className="cartridge">

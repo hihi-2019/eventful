@@ -5,8 +5,9 @@ html, body, .viewport {
   overflow: hidden;
 }
 
-#app {
+.app {
   width: 100%;
+  background-color: rgb(9, 9, 59);
 }
 
 div {

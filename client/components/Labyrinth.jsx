@@ -2,6 +2,8 @@ import React from 'react'
 import Pixel from "./Pixel"
 import { Link } from 'react-router-dom'
 
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
 class Labyrinth extends React.Component {
   constructor(props){
@@ -12,7 +14,7 @@ class Labyrinth extends React.Component {
   }
 
   handleMouseOver = (id) => {
-    if(this.state.tail.length >20){
+    if(this.state.tail.length >100){
       this.state.tail.shift()
     }
     this.setState({
@@ -29,9 +31,9 @@ class Labyrinth extends React.Component {
       (v,i) =>{ 
         let color
         if(this.state.tail.includes(i)){
-          color = 'black'
+          color = 'blue'
         }
-        else {color = 'green'}
+        else {color = 'grey'}
         return(
         <Pixel 
         width={window.screen.width}
