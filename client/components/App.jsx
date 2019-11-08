@@ -5,6 +5,7 @@ import Labyrinth from './Labyrinth'
 import Home from './Home'
 import Pop from './Pop'
 
+
 class App extends React.Component {
   render(){
     return(
