@@ -28,13 +28,15 @@ class Pop extends React.Component {
     return(
       <>
       <Link className="homelink" to='/'>Home</Link>
-      <svg onClick={this.makeBubble} width={window.screen.width} height={window.screen.height}>
-      {this.state.currentCircles.map((circle, i) => {
-        return(
-        <Bubble key={i} cx={circle.cx} cy={circle.cy} r={circle.r}/>
-        )
-      })}
-    </svg>
+      <div className='app'>
+        <svg onClick={this.makeBubble} width={window.screen.width} height={window.screen.height}>
+        {this.state.currentCircles.map((circle, i) => {
+          return(
+          <Bubble key={i} cx={circle.cx} cy={circle.cy} r={circle.r}/>
+          )
+        })}
+      </svg>
+      </div>
     </>
     )       
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 import Circle from './Circle'
+import { Link } from 'react-router-dom'
 
 
 const randomHexColor = () =>
@@ -30,6 +31,7 @@ class Gravity extends React.Component {
   render() {
     return (
       <>
+        <Link className="homelink" to='/'>Home</Link>
         <KeyboardEventHandler
           handleKeys={['a']}
           onKeyEvent={(key, evt) => this.handleKeyStroke()} />
