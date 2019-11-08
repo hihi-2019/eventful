@@ -1,23 +1,28 @@
 import React from 'react'
 
+
 class Circle extends React.Component {
     constructor(props) {
         super(props)
         this.state={
-          circle: {
-            cx: "40px", 
-            cy: "40px",
-            level : 0,
-            r: 12
-          },
+            cx: this.props.cx, 
+            cy: this.props.cy,
+            r: this.props.r,
+            color: this.props.color
+          }
+      }
 
-        }
+      makeDrop = () => {
+        this.setState({
+          cy: this.state.cy + 5
+        })
       }
       
+      
      render(){
-        return <svg width="80px" height="80px">
-          <circle cx={this.state.circle.cx} cy={this.state.circle.cy} r= {this.state.circle.r} />
-        </svg>
+        return(
+          <circle onMouseMove={this.makeDrop} fill={this.state.color} opacity={0.4} cx={this.state.cx} cy={this.state.cy} r={this.state.r}/>
+        )
       }
     }
 
